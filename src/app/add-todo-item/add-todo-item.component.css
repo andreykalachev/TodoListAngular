@@ -1,0 +1,26 @@
+.form-card .content label{
+  font-weight: bold;
+  margin: 5px;
+  text-align: left;
+  min-width: 120px;
+}
+
+.form-card .content input, .form-cardselect, .form-card .content textarea{
+  min-width: 300px;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.form-card .content  textarea{
+  padding: 5px;
+  resize: none;
+  height: 100px;
+}
+
+.buttons {
+  padding: 0 20%;
+}
+
+.buttons button{
+  min-width: 100px;
+}

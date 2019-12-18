@@ -1,0 +1,9 @@
+.btn {
+  padding: 5px;
+  margin: 5px;
+  min-width: 100px;
+}
+
+.done-item{
+  background-color: #eee;
+}
