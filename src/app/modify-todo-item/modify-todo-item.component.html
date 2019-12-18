@@ -1,0 +1,19 @@
+<div class="form-card">
+  <div class="content">
+    <h4>Modify item</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="Title" [(ngModel)]="title"/>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="Description" [(ngModel)]="description"></textarea>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary" (click)="update()">Update</button>
+        <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

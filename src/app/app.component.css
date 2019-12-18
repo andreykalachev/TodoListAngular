@@ -1,0 +1,85 @@
+.my-app{
+  padding: 30px;
+  width: 100%;
+  position: relative;
+  background-color: #eee;
+}
+
+.my-app h2{
+  text-align: center;
+}
+
+.auth-buttons{
+  position: absolute;
+  top: 36px;
+  right: 5%;
+}
+
+.auth-buttons .button{
+  margin: 0 5px;
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 10%;
+  border: black 1px solid;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.auth-buttons .button:hover{
+  margin-top: -1px;
+  border: black 2px solid;
+}
+
+.form-card{
+  display: flex;
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.form-card h4{
+  text-align: center;
+  margin: 15px;
+}
+
+.form-card .content{
+  padding: 20px;
+  background-color: #fefefe;
+  box-shadow: black 1px 2px 4px;
+  height: auto;
+  align-self: center;
+  border-radius: 5px;
+}
+
+.form-card .content label{
+  font-weight: bold;
+  margin: 5px;
+  text-align: left;
+  min-width: 80px;
+}
+
+.form-card .content input, .form-card .content select, .form-card .content textarea{
+  min-width: 220px;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.form-card .content .form-group{
+  margin: 10px 0;
+}
+
+.form-card .content .buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+
