@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   email: string;
   password: string;
-
+  isFormValid: boolean = false;
 
   ngOnInit() {
     document.getElementById('email').focus();
@@ -36,5 +36,12 @@ export class LoginComponent implements OnInit {
 
   cancel() {
     this.router.navigate(['']);
+  }
+
+  CheckValidity(){
+    if (this.email == '' || this.password == '') {
+      this.isFormValid = false;
+    }
+    else this.isFormValid = true;
   }
 }

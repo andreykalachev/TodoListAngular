@@ -22,6 +22,7 @@ export class ModifyTodoItemComponent implements OnInit {
   title: string;
   description: string;
   id: Guid;
+  isFormValid: boolean = true;
 
   ngOnInit() {
     this.id = Guid.parse(this.route.snapshot.paramMap.get('id'));
@@ -47,5 +48,12 @@ export class ModifyTodoItemComponent implements OnInit {
 
   cancel() {
     this.router.navigate(['/todoList']);
+  }
+
+  CheckValidity(){
+    if (this.title == '' || this.description == '') {
+      this.isFormValid = false;
+    }
+    else this.isFormValid = true;
   }
 }

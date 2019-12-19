@@ -39,7 +39,7 @@ export class TodoListService {
   getMyTodoList(): Observable<TodoItem[]> {
     let headers = this.httpOptions.headers.append('Authorization', this.cookieService.get('Authorization'));
 
-    return this.http.get('http://localhost:63289/allMyTasks', {headers}).pipe(map(
+    return this.http.get('http://localhost:63289/TodoList/allMyTasks', {headers}).pipe(map(
       data => {
         return data as TodoItem[];
       },

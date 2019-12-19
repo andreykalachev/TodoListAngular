@@ -1,7 +1,7 @@
 <div class="form-card">
   <div class="content">
     <h4>Login</h4>
-    <form>
+      <form (keyup)="CheckValidity()">
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" id="email" name="Email" [(ngModel)]="email"/>
@@ -11,7 +11,7 @@
         <input type="text" id="password" name="Password" [(ngModel)]="password"/>
       </div>
       <div class="buttons">
-        <button class="btn btn-primary" (click)="login()">Log in</button>
+        <button class="btn btn-primary" [disabled]=!isFormValid  (click)="login()">Log in</button>
         <button class="btn btn-danger" (click)="cancel()">Cancel</button>
       </div>
     </form>

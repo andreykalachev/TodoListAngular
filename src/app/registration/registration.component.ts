@@ -23,6 +23,7 @@ export class RegistrationComponent implements OnInit {
   email: string;
   password: string;
   repeatPassword: string;
+  isFormValid: boolean = false;
   userRole: Role;
 
   ngOnInit() {
@@ -40,6 +41,19 @@ export class RegistrationComponent implements OnInit {
         this.router.navigate(['/todoList']);
       },
       error => console.log('oops', error));
+  }
+
+  CheckValidity(){
+    if (this.name == '' || this.email == '' || this.password == null || this.repeatPassword == null || this.password != this.repeatPassword
+    || !this.validateEmail(this.email)) {
+      this.isFormValid = false;
+    }
+    else this.isFormValid = true;
+  }
+
+  private validateEmail(email: string) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
   }
 
   cancel() {

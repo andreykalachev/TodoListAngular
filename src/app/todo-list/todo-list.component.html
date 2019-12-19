@@ -5,19 +5,19 @@
     <tr>
       <td>Title</td>
       <td>Description</td>
-      <td>Date Added</td>
-      <td>IsDone</td>
-      <td>Added By</td>
-      <td>Date Done</td>
+      <td>Date added</td>
+      <td>Is done</td>
+      <td>Added by</td>
+      <td>Date done</td>
       <td></td>
     </tr>
     <tr *ngFor="let item of todoItems" [class.done-item]=item.isDone>
       <td>{{item.title}}</td>
       <td>{{item.description}}</td>
-      <td>{{item.dateAdded | date}}</td>
+      <td>{{item.dateAdded | date:"dd/mm/yyyy hh:mm a"}}</td>
       <td><input id="{{item.id}}" type="checkbox" [checked]=item.isDone (click)="toggleDone(item)"></td>
       <td>{{item.addedBy.name}}</td>
-      <td>{{item.dateDone | date}}</td>
+      <td>{{item.dateDone | date:"dd/mm/yyyy hh:mm a"}}</td>
       <td>
         <button class="btn btn-warning" (click)="modify(item)">Modify</button>
         <button class="btn btn-danger" (click)="delete(item)">Delete</button>

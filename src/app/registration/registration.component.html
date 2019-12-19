@@ -1,14 +1,14 @@
 <div class="form-card">
   <div class="content">
     <h4>Registration</h4>
-    <form>
+    <form (keyup)="CheckValidity()">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="Name" [(ngModel)]="name"/>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" id="email" name="Email" [(ngModel)]="email"/>
+        <input type="email" id="email" name="Email"[(ngModel)]="email"/>
       </div>
       <div class="form-group">
       <label for="password">Password</label>
@@ -27,7 +27,7 @@
       </select>
       </div>
       <div class="buttons">
-        <button class="btn btn-primary" (click)="register()">Register</button>
+        <button [disabled]=!isFormValid class="btn btn-primary" (click)="register()">Register</button>
         <button class="btn btn-danger" (click)="cancel()">Cancel</button>
       </div>
     </form>
